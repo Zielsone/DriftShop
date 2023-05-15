@@ -1,0 +1,431 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.slogan {
+  margin-bottom: 0.5em;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #c10005;
+  text-transform: uppercase;
+  font-style: oblique;
+}
+
+.navBlock {
+  overflow: hidden;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+.header__text {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  padding: 2em;
+}
+.header__img {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../pic/header-pic640.jpg");
+  background-size: cover;
+  filter: saturate(40%);
+}
+.header__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(193, 0, 5, 0.1);
+}
+.header__bg-icon {
+  position: absolute;
+  opacity: 0.2;
+  z-index: -5;
+  bottom: 5em;
+  right: -3em;
+  width: 50%;
+}
+.header .hamburger {
+  position: absolute;
+  top: 3em;
+  transform: translateY(-50%);
+  left: 1em;
+  z-index: 900;
+}
+.header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
+  background-color: #fff;
+  z-index: 900;
+}
+
+.nav-desktop {
+  display: none;
+}
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  transform: translateY(-102%);
+  transition: transform 0.3s;
+  z-index: 10;
+}
+.nav-mobile--active {
+  transform: translateX(0);
+}
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: #c10005;
+  font-weight: 100;
+  font-size: 2.5rem;
+  padding: 1.5em;
+  transition: color 0.3s;
+}
+.nav a::before, .nav a::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  transition: 0.3s;
+}
+.nav a::before {
+  top: 25px;
+  left: 25px;
+  border-top: 0px solid #f40006;
+  border-left: 0px solid #f40006;
+}
+.nav a::after {
+  bottom: 25px;
+  right: 25px;
+  border-bottom: 0px solid #f40006;
+  border-right: 0px solid #f40006;
+}
+.nav a:hover {
+  color: #f40006;
+}
+.nav a:hover::before, .nav a:hover::after {
+  width: 30px;
+  height: 30%;
+}
+.nav a:hover::before {
+  border-top: 1px solid #f40006;
+  border-left: 1px solid #f40006;
+}
+.nav a:hover::after {
+  border-bottom: 1px solid #f40006;
+  border-right: 1px solid #f40006;
+}
+
+.products {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 2em;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.prodBox {
+  padding: 4em 2em;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2em;
+}
+.prodBox__box {
+  grid-column: 1/12;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 3px solid #707070;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.prodBox__box h3 {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 1em;
+}
+.prodBox__box p {
+  font-size: 1.2rem;
+  padding: 1em;
+}
+.prodBox__box button {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 10px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: visible;
+  transition: 0.8s;
+}
+.prodBox__box button::before, .prodBox__box button::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: 0.5s;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.prodBox__box button::before {
+  top: 0;
+  left: 0;
+}
+.prodBox__box button::after {
+  bottom: 0;
+  right: 0;
+}
+.prodBox__box button:hover {
+  color: #f40006;
+  border: 1px solid transparent;
+}
+.prodBox__box button:hover::after {
+  bottom: -10px;
+  right: -10px;
+  border-bottom: 5px solid #f40006;
+  border-right: 5px solid #f40006;
+}
+.prodBox__box button:hover::before {
+  top: -10px;
+  left: -10px;
+  border-top: 5px solid #f40006;
+  border-left: 5px solid #f40006;
+}
+.prodBox__box--img-one {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.prodBox__box--img-one:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+.prodBox__box--img-two {
+  width: 100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.prodBox__box--img-two:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+.prodBox__box--img-three {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/4;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+.prodBox__box--img-three:hover {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.newsletter {
+  padding: 4em 2em;
+  background-color: #c10005;
+  text-align: center;
+}
+.newsletter__text {
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+.newsletter__form input {
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+.newsletter__form button {
+  margin-top: 1em;
+  padding: 1em;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  overflow: visible;
+  transition: background-color 0.8s;
+}
+.newsletter__form button:hover {
+  color: #f40006;
+  border: 2px solid transparent;
+  background-color: #fff;
+}
+
+.footer {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 20px;
+  padding: 3em 3em;
+}
+.footer p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .products .prodBox__box {
+    grid-column: 2/11;
+  }
+  .products .prodBox__box h3 {
+    font-size: 2.3rem;
+    padding: 1em;
+  }
+  .products .prodBox__box p {
+    font-size: 1.8rem;
+    padding: 1em;
+  }
+  .products .prodBox__box button {
+    padding: 20px 20px;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    grid-template-rows: auto repeat(2, 1fr);
+  }
+  .header__text {
+    grid-row: 2/4;
+    grid-column: 2/3;
+  }
+  .header__img {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    background-image: url("../pic/header-pic1920.jpg");
+    background-position: 30% 50%;
+  }
+  .header .hamburger {
+    display: none;
+  }
+  .slogan {
+    font-size: 10rem;
+    margin-bottom: 0;
+  }
+  .nav {
+    position: relative;
+    height: 15vh;
+    text-align: center;
+    display: flex;
+  }
+  .nav-mobile {
+    display: none;
+  }
+  .nav-desktop {
+    display: block;
+    padding: 2em;
+  }
+  .section-title {
+    font-size: 4rem;
+  }
+  .products .prodBox__box {
+    grid-column: 1/12;
+    height: 400px;
+  }
+  .products .prodBox__box h3 {
+    font-size: 3rem;
+    padding: 1em;
+  }
+  .products .prodBox__box p {
+    font-size: 2rem;
+    padding: 1em;
+  }
+  .products .prodBox__box button {
+    padding: 25px 25px;
+    font-size: 1.8rem;
+  }
+  .newsletter__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 61%;
+  }
+  .newsletter__text {
+    margin-bottom: 0;
+  }
+  .newsletter__form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  .newsletter__form input {
+    margin-bottom: 0;
+  }
+  .newsletter__form button {
+    margin-left: 1em;
+  }
+}/*# sourceMappingURL=main.css.map */
