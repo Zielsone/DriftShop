@@ -338,6 +338,66 @@ body {
   font-weight: 800;
 }
 
+.shop {
+  color: #fff;
+  text-align: center;
+  padding: 2em 2em;
+  margin: 2em 2em;
+}
+.shop__wrapper--title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.header__hamburger .hamburger {
+  position: absolute;
+  top: 3em;
+  transform: translateY(-50%);
+  left: 1em;
+  z-index: 900;
+}
+.header__hamburger .hamburger-inner, .header__hamburger .hamburger-inner::before, .header__hamburger .hamburger-inner::after {
+  background-color: #fff;
+  z-index: 900;
+}
+
+.offers {
+  margin-bottom: 2em;
+}
+.offers__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5em;
+}
+.offers__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 23em 5em 2em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.offers__card img {
+  height: 100%;
+  width: 100%;
+}
+.offers__card .offers-title {
+  font-size: 2rem;
+}
+.offers__card .offers-price {
+  font-size: 1.7rem;
+  color: #f40006;
+}
+.offers__card--two img {
+  transform: rotateY(180deg);
+}
+.offers__card--three img {
+  filter: saturate(30%);
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
 @media (min-width: 768px) {
   .products .prodBox__box {
     grid-column: 2/11;
@@ -427,5 +487,17 @@ body {
   }
   .newsletter__form button {
     margin-left: 1em;
+  }
+  .header__hamburger .hamburger {
+    display: none;
+  }
+  .shop {
+    margin: 0;
+  }
+  .offers__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2em;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+.shop {
+  color: #fff;
+  text-align: center;
+  padding: 2em 5em;
+  margin: 5em 5em;
+}
+.shop__wrapper--title {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+header .hamburger-inner, header .hamburger-inner::before, header .hamburger-inner::after {
+  background-color: #fff;
+  z-index: 900;
+}/*# sourceMappingURL=shop.css.map */
