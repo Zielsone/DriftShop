@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriftShop.pl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav nav-mobile">
+        <a href="index.html" class="nav__link">Strona główna</a>
+        <a href="shop.html" class="nav__link">Sklep</a>
+        <a href="contact.html" class="nav__link">Kontakt</a>
+        <a href="cart.html" class="nav__link">Koszyk</a>
+    </nav>
+
+    <nav class="nav nav-desktop">
+        <a href="index.html" class="nav__link">Strona główna</a>
+        <a href="shop.html" class="nav__link">Sklep</a>
+        <a href="contakt.html" class="nav__link">Kontakt</a>
+        <a href="cart.html" class="nav__link">Koszyk</a>
+    </nav>
+ <header class="header__hamburger">   
+    <button class="hamburger hamburger--elastic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div class="contact">
+        <div class="contact-shadow-bg"></div>
+        <h1 class="contact__header">KONTAKT</h1>
+        <p class="contact__text">Jeśli masz jakieś pytania napisz do nas używając formularza kontaktowego</p>
+      </div>
+      </header>
+
+      <main>
+        <section class="form">
+          <div class="wrapper contact__wrapper">
+
+            <form class="contact__form">
+
+                        <div class="contact__form-box">
+                            <label for="name">Imię</label>
+                            <input type="text" id="name">
+                        </div>
+
+                        <div class="contact__form-box">
+                            <label for="mail">Nazwisko</label>
+                            <input type="email" id="mail">
+                        </div>
+
+                        <div class="contact__form-box">
+                            <label for="msg">Wiadomość</label>
+                            <textarea id="msg" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <button type="submit" class="contact__form-btn">Wyślij</button>
+                    </form>
+      
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer">
+            <p>All right reserved &copy <a href="https://github.com/Zielsone">Zielsone</a></p>
+        </div>
+    </footer>
+
+
+      
+<script src="./JS/script.js"></script>
+</body>
+</html>
