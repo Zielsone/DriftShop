@@ -516,6 +516,7 @@ body {
 .cart {
   text-align: center;
   padding: 2em;
+  height: 64%;
 }
 .cart__header {
   font-size: 4rem;
