@@ -383,13 +383,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1.5em;
+  gap: 1em;
   padding: 2em 2em;
 }
 .offers__card {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20em 5em 2em;
+  grid-template-rows: 10em 6em 2em;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -542,18 +542,19 @@ body {
   text-align: center;
   font-size: 1.5rem;
 }
-.cart__wrapper button {
-  grid-column: 3/5;
+.cart__wrapper .cb_button {
+  grid-column: 2/6;
   grid-row: 2/3;
   margin: 3em;
   border: solid #fff;
   background: none;
   color: #fff;
+  font-size: 1.2rem;
   cursor: pointer;
   font-weight: 800;
   transition: background-color 0.3s, color 0.3s;
 }
-.cart__wrapper button a {
+.cart__wrapper .cb_button a {
   display: block;
   width: 100%;
   height: 100%;
@@ -562,11 +563,11 @@ body {
   text-decoration: none;
   transition: color 0.3s;
 }
-.cart__wrapper button a:hover {
+.cart__wrapper .cb_button a:hover {
   color: #f40006;
   outline: none;
 }
-.cart__wrapper button:hover, .cart__wrapper button:focus {
+.cart__wrapper .cb_button:hover, .cart__wrapper .cb_button:focus {
   outline: none;
   color: #f40006;
   background-color: #fff;
@@ -648,18 +649,18 @@ body {
     align-items: center;
     width: 61%;
   }
-  .newsletter__text {
+  .newsletter__wrapper__text {
     margin-bottom: 0;
   }
-  .newsletter__form {
+  .newsletter__wrapper__form {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
   }
-  .newsletter__form input {
+  .newsletter__wrapper__form input {
     margin-bottom: 0;
   }
-  .newsletter__form button {
+  .newsletter__wrapper__form button {
     margin-left: 1em;
   }
   .header__hamburger .hamburger {
@@ -674,6 +675,9 @@ body {
     grid-template-rows: repeat(3, 1fr);
     gap: 2em;
   }
+  .offers__card {
+    grid-template-rows: 20em 5em 2em;
+  }
   .contact {
     background-image: url("../pic/contact_bg_1920.jpg");
   }
@@ -682,5 +686,14 @@ body {
   }
   .contact__text {
     font-size: 3rem;
+  }
+  .cart .cb_button {
+    grid-column: 3/5;
+    grid-row: 2/3;
+    margin: 3em;
+    border: solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
