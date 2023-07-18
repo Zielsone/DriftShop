@@ -2,6 +2,6 @@
 
 ## Shop Project 
 
-This is my third project. I tried to create a minimalist sales website. Simple and clear blog section and offers.
+Here is my third project. It represents a small online shop. The design of the site is based on a css grid. 
 
 [DriftShop](https://zielsone.github.io/DriftShop/)
